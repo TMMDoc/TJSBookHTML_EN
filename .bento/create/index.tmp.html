@@ -1,0 +1,529 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_from_profile">From Profile</a>
+<ul class="sectlevel2">
+<li><a href="#_new">New</a></li>
+<li><a href="#_edit">Edit</a></li>
+<li><a href="#_clone_delete">Clone / Delete</a></li>
+<li><a href="#_rename">Rename</a></li>
+<li><a href="#_extrude">Extrude</a></li>
+<li><a href="#_import">Import</a></li>
+</ul>
+</li>
+<li><a href="#_editing_a_profile">Editing a Profile</a>
+<ul class="sectlevel2">
+<li><a href="#_typing_in_new_dimensions">Typing in new dimensions</a></li>
+<li><a href="#_editing_length_dimensions">Editing length dimensions</a></li>
+<li><a href="#_editing_a_90_degree_corner">Editing a 90-degree corner</a></li>
+<li><a href="#_editing_the_base_segment_length">Editing the base segment length</a></li>
+<li><a href="#_editing_the_length_of_any_other_segment">Editing the length of any other segment</a></li>
+<li><a href="#_changing_a_corner_angle">Changing a corner angle</a></li>
+<li><a href="#_creating_a_hemming_fold">Creating a hemming fold</a></li>
+<li><a href="#_adding_new_segments_to_a_profile">Adding new segments to a profile</a></li>
+<li><a href="#_deleting_a_segment">Deleting a segment</a></li>
+<li><a href="#_converting_a_corner_to_a_large_radius_bend">Converting a corner to a large-radius bend</a></li>
+<li><a href="#_converting_a_large_radius_bend_back_to_a_corner">Converting a large-radius bend back to a corner</a></li>
+</ul>
+</li>
+<li><a href="#_fold_flat_dxf">Fold Flat DXF</a>
+<ul class="sectlevel2">
+<li><a href="#_fold">Fold</a></li>
+</ul>
+</li>
+<li><a href="#_import_3d_model">Import 3D Model</a></li>
+<li><a href="#_direct_program">Direct Program</a>
+<ul class="sectlevel2">
+<li><a href="#_settings">Settings</a></li>
+<li><a href="#_add_remove">Add / Remove</a></li>
+<li><a href="#_move_up_move_down_or_prev_bend_next_bend">Move up/ Move down or Prev Bend / Next Bend</a></li>
+<li><a href="#_gauging">Gauging</a></li>
+<li><a href="#_jog">Jog</a></li>
+<li><a href="#_table_programming">Table Programming</a></li>
+<li><a href="#_run">Run</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="img/create.png" alt="create"></span></p>
+</div>
+<div class="paragraph">
+<p>The Create page is used to create new press-brake programs. There are four program creation modes available, as seen from the four icons on this page:</p>
+</div>
+<div class="paragraph">
+<p><strong>From Profile:</strong> Create a program by drawing a new profile or reusing an existing profile and then extruding the profile to the desired length. The program is then automatically sequenced and tooled-up for bending. Profiles are stored in a list for later reuse.</p>
+</div>
+<div class="paragraph">
+<p><strong>Fold flat DXF:</strong> Create a program by starting with a flat DXF part (a development), and then fold it to create a 3D model. You can edit the bend lines in the DXF and set bend angles and directions before folding it up. The bends in this model are automatically sequenced and tooled-up for bending. Before folding up the flat pattern, make sure you enter the required parameters in the Settings dialog and verify the thickness and material used. If you plan to use special tools, you should select and lock them in the same dialog. In fact, those parameters influence the dimensions of the resulting folded 3D model. After this initial folding, the 3D model always maintains its dimensions even if you change the tooling using the Edit &gt; Sequence &gt; Recompute.</p>
+</div>
+<div class="paragraph">
+<p><strong>Import 3D model:</strong> Create a program by starting with a 3D model, an IGES or other common 3D formats (SolidWorks, SolidEdge, STEP, Parasolid etc). The bends in this model are then automatically sequenced and tooled up. When you import a MetaCAM 3D model, that is already tooled and sequenced, you will find that the model is re-tooled while importing it in RightAngle. To keep the tooling intact, you can go to the Edit page and use the import command that transfer provides. Once imported, you can either run or edit the program and then process the model on the brake.</p>
+</div>
+<div class="paragraph">
+<p><strong>Direct program:</strong> Create a program directly simply by entering back gauge positions, bending angles and bend lengths. The program can be run directly on the brake with a suitable blank.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+In the first 3 methods, a 3D model of the part you are producing is available (or created) and can display 3D simulations of the bending process. It can also check that the part being bent will not collide with the press-brake or with the tooling. Fouling between different parts of the component during the bending cycle can also be checked.
+However, with the Direct Program method, these checks cannot be done since does not have a complete 3D model of the component you are trying to produce. Use this method with care.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_from_profile">From Profile</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This option is used to create extrusions based on a profile which is defined in a parametric manner. When you press this option, displays the parametric profile shapes you have already created:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/profiles.png" alt="profiles"></span></p>
+</div>
+<div class="paragraph">
+<p>The buttons on the right are explained below:</p>
+</div>
+<div class="sect2">
+<h3 id="_new">New</h3>
+<div class="paragraph">
+<p>You can sketch a completely new profile by touching New. The profile starts with a single straight section, but you can then add new sections and modify the lengths of sections and the angles between sections.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_edit">Edit</h3>
+<div class="paragraph">
+<p>Select one of these profiles by touching it, and then touch Edit to modify it for use. From this, editor window, you can then set up a suitable material and thickness and extrude the profile to create a workpiece.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_clone_delete">Clone / Delete</h3>
+<div class="paragraph">
+<p>Use Clone to make a copy of the selected profile (so you can then modify the copy), or touch Delete to delete the selected profile.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rename">Rename</h3>
+<div class="paragraph">
+<p>Click on the Rename button and it opens a dialog (see picture below) to rename the selected profile.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/profilerename.png" alt="profilerename"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_extrude">Extrude</h3>
+<div class="paragraph">
+<p>Select an existing profile and then click Extrude. The part settings dialog pops up where the value for
+Extrusion can be entered and then press the Done button to create it.
+See the section on Part Settings for more details.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_import">Import</h3>
+<div class="paragraph">
+<p>Import a dxf file which contains the side view of the part.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_editing_a_profile">Editing a Profile</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Select a profile in the profile library and choose Edit to modify the profile. The profile opens in the profile editor with the important dimensions displayed, as follows:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/profiledit.png" alt="profiledit"></span></p>
+</div>
+<div class="paragraph">
+<p>All segment lengths are dimensioned; angles which are not 90 degrees are also dimensioned. If a corner uses a large radius (to be done as a step bend), the inner radius is also displayed as a dimension. For example, see the R80 dimension at the top right of the profile above.</p>
+</div>
+<div class="sect2">
+<h3 id="_typing_in_new_dimensions">Typing in new dimensions</h3>
+<div class="paragraph">
+<p>Tap any of the displayed dimensions and type in a new value directly. Then, press Enter to reshape the profile. If length value is entered out of range, an appropriate warning message appears. Here is the same profile as above, keying in some new dimensions. Similarly, if the angle entered is not within the range, a warning message is displayed.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editdimen.png" alt="editdimen"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_editing_length_dimensions">Editing length dimensions</h3>
+<div class="paragraph">
+<p>When you tap on a length dimension to edit it, you will notice that a dimension line indicating the exact location the dimension is referred to, is displayed. The dimension arrows also serve another purpose; by tapping on one of the displayed dimension arrows, you can change the dimension from an outer dimension to an inner dimension or vice versa. For example, here is a profile showing a 100 mm outer dimension:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editlength.png" alt="editlength"></span></p>
+</div>
+<div class="paragraph">
+<p>Upon tapping near the arrow on the right, the dimension leader line is redrawn and the dimension within the input box is updated as well:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editlength1.png" alt="editlength1"></span></p>
+</div>
+<div class="paragraph">
+<p>If the corner is an acute angled corner, there are three different dimensioning methods, which you can cycle through by tapping on the arrow. The picture below shows all three dimensioning styles in action.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editlength2.png" alt="editlength2"></span></p>
+</div>
+<div class="paragraph">
+<p>For the second and third style, the dimension reference point is a theoretical sharp point, which does not actually appear on the profile. To assist you in visualizing this point, construction lines are drawn in yellow as seen in the pictures above. Upon cycling through these styles by tapping on the dimension arrow, the actual measurement value also updates.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+In the profile above, suppose the required distance to the outer corner point is 100 mm. This can be set up by tapping on the arrow until the dimensioning style shows the outer corner point. Now, the value in the input box reads 105.86. Overwrite this by typing in 100; this now sets the outer corner dimension to 100 mm. Now switching to the tangent point dimension, it correspondingly reads 94.14 mm.
+</div>
+</div>
+<div class="paragraph">
+<p>For large-radius bends, you can set the dimension to the outer tangent point, or to the start of the bent section:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editlength3.png" alt="editlength3"></span></p>
+</div>
+<div class="paragraph">
+<p>Summary:</p>
+</div>
+<div class="paragraph">
+<p>While working with linear dimensions, it is possible to choose between various dimension basis points (on the inner surface, outer surface, the bending section tangent etc). You switch between these by tapping on the dimension line arrow.
+Note that just tapping on the arrow does not change the shape of the profile; it just re-dimensions them using a different basis. An appropriate length value can later be typed in to change the profile’s shape.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_editing_a_90_degree_corner">Editing a 90-degree corner</h3>
+<div class="paragraph">
+<p>For 90-degree corners, the angle measurement is not displayed. However, just tapping on the corner displays an edit box with the text 90. Type in a different measurement to change the corner angle. The picture below shows this text box being displayed:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/edit90.png" alt="edit90"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_editing_the_base_segment_length">Editing the base segment length</h3>
+<div class="paragraph">
+<p>Each profile being edited has a base segment; this is the horizontal segment near the center of the profile. The base segment of a profile is special; it acts like the anchor for the profile and you cannot change it to any angle other than horizontal. You can change the base segment’s length by touching one of its endpoints and dragging left or right; the figure below shows the locations where it is possible to touch and drag to change the base segment length for a profile:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editbaselength.png" alt="editbaselength"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_editing_the_length_of_any_other_segment">Editing the length of any other segment</h3>
+<div class="paragraph">
+<p>The length of any other segment can be edited by clicking on the free end of that segment and dragging the same. The free end of any segment is the end that is further away from the base.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editlenseg.png" alt="editlenseg"></span></p>
+</div>
+<div class="paragraph">
+<p>As the segment is dragged, the length dimension of the segment gets updated continuously, so an immediate feedback on the actual length setting at the segment is achieved.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_changing_a_corner_angle">Changing a corner angle</h3>
+<div class="paragraph">
+<p>To edit a corner angle, click on the free end of a segment and drag it sideways; this changes the angle at the start of the segment. The example below helps us understand how this works. As the segment is dragged to change the angle, the interior angle snaps to some common angles (like 45, 60, 90 and so on). In case of a non-standard angle, drag to set an approximate angle, and then tap on the angle display and type in the exact value.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editcorner.png" alt="editcorner"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The end of the segment closer to the base segment is fixed; the other end moves when you drag it.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You can change both the length and angle of a segment at the same time; dragging sideways changes the angle, while dragging along the segment changes the length.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_creating_a_hemming_fold">Creating a hemming fold</h3>
+<div class="paragraph">
+<p>A <strong>hem</strong> can be created by dragging a segment sideways until it folds back on the adjacent segment. If the interior angle closes below 30 degrees, the segment snaps to become a hem:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/hem.png" alt="hem"></span></p>
+</div>
+<div class="paragraph">
+<p>Below is the hem created.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/hem1.png" alt="hem1"></span></p>
+</div>
+<div class="paragraph">
+<p>A hem can be created on the other side by dragging your finger slightly to the outside of the flange before releasing it:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/hem2.png" alt="hem2"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_adding_new_segments_to_a_profile">Adding new segments to a profile</h3>
+<div class="paragraph">
+<p>A new flange can be added to the profile at either of the free ends of the profile. To do this, click a small distance away from either of the free ends. If clicked too close to the free end, the segment also will be dragged along resulting in changing its length or angle. Touch about a centimetre or two away from the free end and start dragging to add a new segment to the profile:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/addseg.png" alt="addseg"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_deleting_a_segment">Deleting a segment</h3>
+<div class="paragraph">
+<p>A segment can be deleted in one of two ways:
+Tap on the segment length. It becomes editable. Type in 0 and press Enter; the segment gets deleted.
+Click on the free end of the segment and drag it toward the other end, shortening the segment. If it is dragged close enough, the segment disappears when you lift your finger (Without lifting, you can continue dragging and the segment will re-appear once you move a bit further away from the fixed end).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/deleteseg.png" alt="deleteseg"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The base segment of a profile cannot be deleted.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_converting_a_corner_to_a_large_radius_bend">Converting a corner to a large-radius bend</h3>
+<div class="paragraph">
+<p>A normal corner can be converted into a large radius bend (i.e., step bend). To do this, click a small distance away from the outer side of the corner, and drag inwards (If clicked too close to the corner, the segment also will be dragged along resulting in changing its length or angle).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/radiusbend.png" alt="radiusbend"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/radiusbend2.png" alt="radiusbend2"></span></p>
+</div>
+<div class="paragraph">
+<p>To fine-tune the radius, tap on the radius measurement which brings up the Edit Step Bend dialog as shown below:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/radiusbend3.png" alt="radiusbend3"></span></p>
+</div>
+<div class="paragraph">
+<p>Use this dialog to tune the Inner Radius, Angle, Step Count and Chordal Deviation (D) values.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_converting_a_large_radius_bend_back_to_a_corner">Converting a large-radius bend back to a corner</h3>
+<div class="paragraph">
+<p>A large radius bend can be converted back to a simple-bend corner by performing the reverse process. Touch near the radius marker, and drag outwards:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editbend.png" alt="editbend"></span></p>
+</div>
+<div class="paragraph">
+<p>Settings:</p>
+</div>
+<div class="paragraph">
+<p>Use this command to modify the settings like Material, Thickness, Punch, Die, Punch holder, Die holder etc. See the Part Settings section for more details.</p>
+</div>
+<div class="paragraph">
+<p>Extrude:</p>
+</div>
+<div class="paragraph">
+<p>Touch this button and enter the Extrusion value in the Part Settings dialog that comes up to create the extrusion.
+Once the profile creation or editing is completed, press the Done button. If changes have been made to an existing profile or a new profile has been created a prompt like the one below is displayed:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editbend1.png" alt="editbend1"></span></p>
+</div>
+<div class="paragraph">
+<p>You can either to choose to save changes by pressing <span class="icon"><i class="fa fa-check"></i></span> or discard all the changes made by pressing <span class="icon"><i class="fa fa-close"></i></span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fold_flat_dxf">Fold Flat DXF</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When this option is selected, a File Selection panel appears using which the required DXF file to be folded can be picked. Once a file is selected, it is opened in the Fold DXF page:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/foldflat.png" alt="foldflat"></span></p>
+</div>
+<div class="paragraph">
+<p>It is possible to set a material, change the thickness or assign a Punch or Die for the DXF file by touching the Settings button on the right which is the same as the Part Settings dialog that appears while editing a profile.
+The bend lines in this DXF file are identified and displayed with small dots. By default, will consider all of these to be 90-degree, UP bends.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It is possible to set a material, change the thickness or assign a Punch or Die for the DXF file by touching the Settings button on the right which is the same as the Part Settings dialog that appears while editing a profile.
+The bend lines in this DXF file are identified and displayed with small dots. By default, will consider all of these to be 90-degree, UP bends.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To edit bend information attached to a bend line, just touch the dot on that bend line. The below panel appears:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/foldflat1.png" alt="foldflat1"></span></p>
+</div>
+<div class="paragraph">
+<p>You can set the bend angle, bend direction, type of bend (air-bend, coining, hemming etc) in this panel. In case of Large-Radius bends enter the Radius and Bump Count using the options provided.
+As the bend information is being edited for these bends, the dots on the bend lines will change to yellow (to indicate that the bend information has been edited). This way, one can quickly see which bends lines have been reviewed and modified.</p>
+</div>
+<div class="sect2">
+<h3 id="_fold">Fold</h3>
+<div class="paragraph">
+<p>Touching the Fold button will fold the DXF using the angles specified and displays a 3-dimensional view. This view can be rotated by touching on the blank area around the model and then dragging the view. Navigation buttons are present to the left side of the window. Use the arrow keys left, right, up and down to move the model along the respective direction. Touch the Plus mark to zoom-in and use the Minus mark to zoom-out the model. To fit the model to the window, touch the rectangle mark, present in between the Plus and Minus icons.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/fold.png" alt="fold"></span></p>
+</div>
+<div class="paragraph">
+<p>If this looks fine, then press the Do Tooling button to compute a bending sequence and tool assignments for this model. The model is then saved in the Models folder. Review the sequence, gauge positions, and tooling on this model, or run the program for this model on the press-brake.
+If the model does not look quite correct, you can tap the Cancel button to go back to the previous page, where you can adjust the folding angles and try again.
+Before folding up the flat pattern, make sure the required parameters are entered in the Settings dialog and the thickness and material used are verified. If you plan to use special tools, select and lock them in the same dialog. In fact, those parameters influence the dimensions of the resulting folded 3D model. After this initial folding, the 3D model always maintains its dimensions even if the tooling is changed using the <strong>Edit</strong> &#8594; <strong>Sequence</strong> &#8594; <strong>Recompute</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_import_3d_model">Import 3D Model</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This option is used to import a 3D model from other format and use it for bending. The File Selection panel appears when this option is selected. Then pick a 3D file to import.<br>
+The following formats are supported:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>IGES 3D model (. iges, .igs files)</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>After the file is selected, the 3D model data is imported and displayed.
+Use the screen to rotate the model around and verify that the import looks correct. In the displayed model, bend lines are marked in yellow, while cut/weld edges are marked in black:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/import3d.png" alt="import3d"></span></p>
+</div>
+<div class="paragraph">
+<p>If the model looks OK, use the Settings button to set up the material, thickness for the model, as well as the punch and die to be used.</p>
+</div>
+<div class="paragraph">
+<p>Use the unfold button to view the flat pattern and the flat dimensions of the imported file in a new window. Upon pressing the back button, the flat pattern window closes, and returns to the 3D Import window.</p>
+</div>
+<div class="paragraph">
+<p>Touching the Do Tooling button process the model by computing a bend sequence, back-gauge positions and the tooling setup.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_direct_program">Direct Program</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Direct Program environment is used to create a simple bending program directly on the control. The program is created by specifying the bend length, the bend angle and the gauges positions for each bend. If values outside expected ranges are entered, the input is refused, and the expected range is displayed (in the top right corner). The error message is transient - it disappears after a few seconds.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/directprog.png" alt="directprog"></span></p>
+</div>
+<div class="paragraph">
+<p>When this program is run, the setup screen displays all the punches and dies used, along with their 'flip' states (so it can be mounted correctly by the operator):</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/directprog1.png" alt="directprog1"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_settings">Settings</h3>
+<div class="paragraph">
+<p>Touch the Settings button on the top left to bring up the Part Settings dialog where you can configure the settings like material, thickness, punch, die etc.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_add_remove">Add / Remove</h3>
+<div class="paragraph">
+<p>Touch the Add button on the bottom left panel to add bends into the program and touch the Remove button to remove them.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_move_up_move_down_or_prev_bend_next_bend">Move up/ Move down or Prev Bend / Next Bend</h3>
+<div class="paragraph">
+<p>The <strong>Move up</strong> and <strong>Move down</strong> buttons are used to shuffle the currently selected bend up or down in the sequence. The currently selected bend is displayed in bold color, with the previous and next bends also displayed in a shadowed color. You can touch the <strong>Prev Bend</strong> or <strong>Next Bend</strong> button to display other bends for editing.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gauging">Gauging</h3>
+<div class="paragraph">
+<p>The currently selected bend is displayed in detail on the right panel, and various settings shown can be edited. To understand the meanings of Gauge Z1, Gauge Z2, Gauge R1 and Gauge R2, its necessary to understand the coordinate system used by:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/gauging.png" alt="gauging"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The Z1 and Z2 axes are the gauge positions along the machine table.</p>
+</li>
+<li>
+<p>X axes are gauge distances from the bend line, with increasing X going into the machine.</p>
+</li>
+<li>
+<p>The R axis is the vertical positions of the gauges, with positive R going upwards.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>When the outer height of the flange that needs to be bent is specified, and the gauge position is computed automatically. This computation takes the material, thickness and die opening into account (you can toggle between the two to see the actual Gauge-X that has been computed for a given flange height). On machines where the two gauges can move independently in X, you can input the values for X1 and X2 using the input boxes provided.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_jog">Jog</h3>
+<div class="paragraph">
+<p>Touch the Jog button to bring up the Axis Jog Panel. This allows the user to freely move all the gauge axes using either the handwheel, or by holding down the jog buttons. From this panel, one can record the position of the gauges directly into the program by tapping the teach button there.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_table_programming">Table Programming</h3>
+<div class="paragraph">
+<p>Touch the table to allow editing the bending program in tabular form. This is disabled by default. To enable it, turn ON Allow table programming in <strong>Settings &#8594; Other Settings &#8594; Machine Settings &#8594; Display</strong>. See Table Programming for details.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_run">Run</h3>
+<div class="paragraph">
+<p>Touch the Run to run the currently editing part. If the tooling of the part doesn’t differ from the last run setup, setup sheet will be skipped.</p>
+</div>
+</div>
+</div>
+</div>

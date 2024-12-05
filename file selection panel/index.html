@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>File Selection Panel</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/JFY.png" width="145" height="15" /></div>
+        <div><p>TJS90 Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+  <ul>
+    <li><button class="tree blank"></button><a href="../index.html">Welcome to TJS90</a></li>
+    <li><button class="tree blank"></button><a href="../home/index.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../create/index.html">Create</a></li>
+    <li><button class="tree blank"></button><a href="../edit/index.html">Edit</a></li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../run/index.html">Run</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../run/safety messages.html">Safety Message</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../settings/index.html">Settings</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../settings/jogaxes.html">Jog Axes</a></li>
+        <li><button class="tree blank"></button><a href="../settings/manualprogram.html">Manual Program</a></li>
+        <li><button class="tree blank"></button><a href="../settings/toolinventory.html">Tool Inventory</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../settings/other settings/index.html">Other Settings</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../settings/other settings/machinesettings.html">Machine Settings</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><button class="tree blank"></button><a class="active" href="index.html">File Selection Panel</a></li>
+    <li><button class="tree blank"></button><a href="../part settings/index.html">Part Settings</a></li>
+    <li><button class="tree blank"></button><a href="../link programs/index.html">Link Programs</a></li>
+    <li><button class="tree blank"></button><a href="../table programming/index.html">Table Programming</a></li>
+  </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+  <div>
+    <button>
+      <img src="../res/home.png">
+    </button>
+  </div>
+  <div>
+    <a href="index.html">File Selection Panel</a>
+  </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>File Selection Panel</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The File Selection panel appears whenever you need to pick a file in RightAngle. This panel displays a list of files in a folder. The list of drives available and a partial list of folders are displayed on the left:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/fileselection.png" alt="fileselection"></span></p>
+</div>
+<div class="paragraph">
+<p>Navigate to another folder by touching on the folder names or drive names on the left. For example, from the view above, if you would like to navigate to c:\RA2012\RAData\FoldDXF, touch the c: drive name. This opens the corresponding drive and lists all the folders within. Then, touch RA2012, then RAData and then FoldDXF. After navigating to the right folder, touch the filename you want to open, and then press the OK mark at the bottom right corner. You can use the pointer shown to the bottom-right corner to scroll down and view other files.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_searching_files">Searching Files</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use the small search bar that is present in the top right corner of the dialog for searching files. Type in a part of a filename (without any file extension) and click on the search icon in the top right corner.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/filesearch.png" alt="filesearch"></span></p>
+</div>
+<div class="paragraph">
+<p>The search, then begins. It searches the sub-directory we are currently in and all the sub-directories. So, you could search an entire hard disk by starting at the root directory. During the search, the title changes to Searching&#8230;&#8203; and a running counter of directories and files are displayed at the bottom. Also, the top right displays a Stop Search button to stop the search.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/filesearch1.png" alt="filesearch1"></span></p>
+</div>
+<div class="paragraph">
+<p>Once the search is completed (or if you click the Stop Search button earlier), the caption on the top changes to Search Results and the number of files found are displayed in the bottom:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/filesearch2.png" alt="filesearch2"></span></p>
+</div>
+<div class="paragraph">
+<p>You can now scroll through all the search results and open a file. Alternatively, just tap a folder from the left pane to close the search results and start navigating through the folders.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+  <h3>Contents</h3>
+  <ul>
+    <li level="1">
+      <a href="#_searching_files">Searching Files</a>
+    </li>
+  </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+  <span class="prev"><a href="../settings/other settings/machinesettings.html">Machine Settings</a></span>
+  <span class="next"><a href="../part settings/index.html">Part Settings</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <ul id="results"></ul>
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2024 by JFY-International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

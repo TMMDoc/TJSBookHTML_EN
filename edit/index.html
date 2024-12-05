@@ -1,0 +1,680 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Edit</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/JFY.png" width="145" height="15" /></div>
+        <div><p>TJS90 Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+  <ul>
+    <li><button class="tree blank"></button><a href="../index.html">Welcome to TJS90</a></li>
+    <li><button class="tree blank"></button><a href="../home/index.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../create/index.html">Create</a></li>
+    <li><button class="tree blank"></button><a class="active" href="index.html">Edit</a></li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../run/index.html">Run</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../run/safety messages.html">Safety Message</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../settings/index.html">Settings</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../settings/jogaxes.html">Jog Axes</a></li>
+        <li><button class="tree blank"></button><a href="../settings/manualprogram.html">Manual Program</a></li>
+        <li><button class="tree blank"></button><a href="../settings/toolinventory.html">Tool Inventory</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../settings/other settings/index.html">Other Settings</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../settings/other settings/machinesettings.html">Machine Settings</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../file selection panel/index.html">File Selection Panel</a></li>
+    <li><button class="tree blank"></button><a href="../part settings/index.html">Part Settings</a></li>
+    <li><button class="tree blank"></button><a href="../link programs/index.html">Link Programs</a></li>
+    <li><button class="tree blank"></button><a href="../table programming/index.html">Table Programming</a></li>
+  </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+  <div>
+    <button>
+      <img src="../res/home.png">
+    </button>
+  </div>
+  <div>
+    <a href="index.html">Edit</a>
+  </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Edit</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page displays all the available programs and allows the user to pick one for editing.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/edit.png" alt="edit"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_direct_program">Direct Program</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Direct programs are the programs that have been created directly on the control using the Direct Program environment. There are no 3D illustrations available for each step, nor can do any collision checks for these, except machine-against-machine. When a program is picked and open for editing, a screen very similar to the Direct program creation is presented, except that you are now editing a program that was created earlier.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_models">Models</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These are the bending programs that have been created either by importing from a 3D model, or by folding up a DXF, or using the profile library. These programs have an accompanying 3D model which can be used to set up back-gauges, or to modify the sequence. When these programs are run, step-by-step 3D illustrations are displayed showing the bending steps that are in progress.</p>
+</div>
+<div class="paragraph">
+<p><span class="underline"><strong>edit:</strong></span></p>
+</div>
+<div class="paragraph">
+<p>Select (touch) the program to be edited and then press this button. This brings the Edit Model page where necessary changes to the program can be made.</p>
+</div>
+<div class="paragraph">
+<p><span class="underline"><strong>link:</strong></span></p>
+</div>
+<div class="paragraph">
+<p>Select (touch) the program to be linked and the press this button. Select the other program which is to be linked to this program and then press done to link. Press cancel to abort linking. Press link button for already linked program to unlink it. See Link Programs for details.</p>
+</div>
+<div class="paragraph">
+<p><span class="underline"><strong>rename:</strong></span></p>
+</div>
+<div class="paragraph">
+<p>This command allows user to change the name of the selected program. Just type-in the new name in the dialog that comes up.</p>
+</div>
+<div class="paragraph">
+<p><span class="underline"><strong>delete:</strong></span></p>
+</div>
+<div class="paragraph">
+<p>Use this switch to delete the selected program.</p>
+</div>
+<div class="paragraph">
+<p><span class="underline"><strong>transfer:</strong></span></p>
+</div>
+<div class="paragraph">
+<p>This command allows user to perform operations like converting 3d program to direct program, cloning, exporting and importing files. This command supports the selection multiple programs. You can select or de-select a program by touching it. The options provided by the transfer command include:</p>
+</div>
+<div class="paragraph">
+<p><strong>save direct:</strong></p>
+</div>
+<div class="paragraph">
+<p>This command allows the user to convert 3d program to direct program. 3d program should have only one setup. Also, in a single setup, it is not possible to use multiple punch or die.</p>
+</div>
+<div class="paragraph">
+<p><strong>clone:</strong></p>
+</div>
+<div class="paragraph">
+<p>This command allows user to make an exact copy of the program(s) selected. Select one or more programs and then press this button to create a copy of the selected program(s). When more than one program is cloned, you get a Clone files dialog which asks whether you want to clone the selected number of files. Once the OK mark is pressed, the files are cloned. Generally, the name of the cloned file will have a number after the part name separated by a hyphen (e.g.in case, you clone a part named P5 then the name of the cloned part will be P5-1. If the name P5-1 already exists, the number will be incremented by one i.e. P5-2).</p>
+</div>
+<div class="paragraph">
+<p><strong>save flat:</strong></p>
+</div>
+<div class="paragraph">
+<p>This command is used to save the selected program as a flat, i.e. the shape of the part before bending. Pressing this button brings up the Select location to save flat dialog, where one can choose the folder location to save the flat part.</p>
+</div>
+<div class="paragraph">
+<p><strong>export:</strong></p>
+</div>
+<div class="paragraph">
+<p>When pressed, this command brings up the Export File dialog through which you pick the location to export the selected file(s).</p>
+</div>
+<div class="paragraph">
+<p><strong>import:</strong></p>
+</div>
+<div class="paragraph">
+<p>Program(s) can be imported by using this feature. This button brings up the Import Files dialog using which one or more 3D program or Direct program files can be selected for import. Once the files are selected press <span class="icon"><i class="fa fa-check"></i></span> mark in the dialog to import the file(s). If the name of the file(s) you try to import already exists, a warning message is displayed as seen in the picture below asking whether to replace the existing file(s).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/confirm.png" alt="confirm"></span></p>
+</div>
+<div class="paragraph">
+<p>Press <span class="icon"><i class="fa fa-close"></i></span> to exit from the transfer command.</p>
+</div>
+<div class="paragraph">
+<p><strong>organize:</strong></p>
+</div>
+<div class="paragraph">
+<p>Use this command to customize the view of the Edit page. A dialog as shown in the picture below comes up when you press this button.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/organize.png" alt="organize"></span></p>
+</div>
+<div class="paragraph">
+<p>The edit page displays all the programs from the Programs folder. One can create folders and structure data within this folder. Create new folders using the <strong>new folder</strong> command. This will create a new folder within the Programs folder.</p>
+</div>
+<div class="paragraph">
+<p>On the left, there is <strong>Select Folder</strong> section which shows the directory structure. choosing a folder from the tree and displays the contents of the selected folder in the edit page. It is possible to sort the files in the folder by using the options provided under the <strong>Sort By</strong> section. To sort by name in ascending order choose <strong>Name [A&#8230;&#8203; Z]</strong> and to sort by name in descending order choose <strong>Name [Z&#8230;&#8203; A]</strong>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Newest first</strong> shows all the programs that were created recently and <strong>Oldest first</strong> displays the programs sorted in the ascending order of the created date.</p>
+</div>
+<div class="paragraph">
+<p>Using the <strong>Show Thumbnails</strong>, the thumbnail display can be turned on or off for the programs in the edit page. Use the <strong>delete</strong> button to remove a sub-directory. Note that only a sub-directory that is empty can be deleted. Press <strong>done</strong> to apply the changes and exit.</p>
+</div>
+<div class="paragraph">
+<p><strong>Lock</strong></p>
+</div>
+<div class="paragraph">
+<p>Using this option the created program can be locked for editing.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/lockprogram.png" alt="lockprogram">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Users can access this  menu only if they have Admin or Service level user access.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_edit_model_sequence">Edit Model &#8594; Sequence</h3>
+<div class="paragraph">
+<p>When a program is opened for editing, more options are available. A 3D view of the model is shown, along with some options available from the tabs on the bottom:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/sequence.png" alt="sequence"></span></p>
+</div>
+<div class="sect3">
+<h4 id="_forward_backward">Forward / Backward</h4>
+<div class="paragraph">
+<p>Using this option, one can set up a sequence by folding up, starting from a flat model. Touch the Forward button, and then touch the bend lines in the flat. As you touch them, the bends are folded up and this becomes the bending sequence. It is also possible to sequence backwards by touching the Backward button. In this case, start with a fully folded model, and indicate the bends in reverse sequence.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_bend_navigator">Bend Navigator</h4>
+<div class="paragraph">
+<p>When a 3D model is edited, the Bend Navigator is visible on the top of the screen. This displays the total number of bends in the part, and the bend you are currently working on. For example, this image of the bend navigator shows that there are 4 bends, and we are working on the third bend:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/bendnav.png" alt="bendnav"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Touch any of the numbers in the bend navigator to quickly jump to that bend.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If there are any problems with some of the bends, those bend cells are displayed in a different color. The image below shows a navigator with 6 bends; we are currently working on the second bend, while bends 4 and 5 have some problems that need to be fixed:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/bendnav1.png" alt="bendnav1"></span></p>
+</div>
+<div class="paragraph">
+<p>Touching a bend cell that has a problem displays text indicating what the problem is. In this case, the issue with bend 4 is that no back-gauges are being used to position the workpiece:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/bendnav2.png" alt="bendnav2"></span></p>
+</div>
+<div class="paragraph">
+<p>The bend navigator provides a quick overview of the model that is constantly kept updated while editing the gauges, sequence or tooling. If there are no red cells displayed in the navigator, the model is ready to go.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_skip_bend">Skip Bend</h4>
+<div class="paragraph">
+<p>Pressing this button will toggle the current bend&#8217;s Skip state. Bends that have been skipped have a small dash in a circle drawn near their bend sequence number in the 3D model. Also, a small x is drawn near the bend number in the bend status window on the top. Tapping this bend will also display Bend Skipped. Note that bends that have been skipped can be sequenced just like any other, so that accurate collision checks can be done with the correct folded/unfolded state of the model.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/skipbend.png" alt="skipbend"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_pre_bend">Pre-Bend</h4>
+<div class="paragraph">
+<p>Use this command to add a pre-bend. Type in the interior angle of the pre-bend to add it. This adds the pre-bend. Then, it must be sequenced using the <strong>forward</strong> or <strong>backward</strong> sequence commands. Then, switch to the tooling page, and do a <strong>recompute</strong> (if recompute is done from the sequence page, the manually computed sequence is over-ridden).</p>
+</div>
+<div class="paragraph">
+<p>To remove the pre-bend on a bend line, go to the sequence page, select that bend using the bend numbers on the top and click on the <strong>pre-bend</strong> again.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_grouping_and_ungrouping_bends">Grouping and Ungrouping Bends</h4>
+<div class="paragraph">
+<p>Use <strong>Ungroup</strong> to ungroup bends, which is available whenever a grouped bend is selected as the current bend.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/groupbend.png" alt="groupbend"></span></p>
+</div>
+<div class="paragraph">
+<p>Clicking this button ungroups the currently selected bend (and the bend-count will change on the top). See picture below which shows the result after an ungroup and subsequent <strong>recompute</strong>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/groupbend1.png" alt="groupbend1"></span></p>
+</div>
+<div class="paragraph">
+<p>A set of groupable single bends can likewise be grouped together.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Use the forward or backward sequence tools to move these bends together in the sequence (they should be consecutive).</p>
+</li>
+<li>
+<p>Click on the group command and tap on the bends to be grouped. They will all be highlighted in blue. Also, the group button is highlighted to indicate that you are now in the group mode</p>
+</li>
+<li>
+<p>After you are done selecting all bends to be grouped, click on the group button again. The bends are grouped together and switches out of the group mode. See picture below which shows the result (after doing a subsequent recompute).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/groupbend2.png" alt="groupbend2"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_step_count">Step Count</h4>
+<div class="paragraph">
+<p>step bends can now be exploded into individual bends. Pressing this button brings up the dialog shown in the picture below.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/stepcount.png" alt="stepcount"></span></p>
+</div>
+<div class="paragraph">
+<p>Touch the <strong>Update Step count</strong> to modify just the step count or press the <strong>Change Step-bend</strong> button to convert the step bend into a single radius bend. You can then sequence, tool-up or correct the bends individually.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_recompute">Recompute</h4>
+<div class="paragraph">
+<p>Pressing the <strong>Recompute</strong> button causes to compute a bending sequence for the model. This computed sequence will overwrite any sequence set manually, so use this only when you want to completely overwrite the sequence changes made with the standard computed one. This also brings up the <strong>Select Tools</strong> dialog for further modifications. For more information on this dialog see <em>Recompute</em> in the tooling page.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_display">Display</h4>
+<div class="paragraph">
+<p>Pressing the Display button displays a panel that is used to control some display options. You can use the 9 icons on the left to position the camera to any one of 5 orthogonal directions (top, left, right, front, back) along with 4 isometric directions (front-left, front-right, back-left and back-right):</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/display.png" alt="display"></span></p>
+</div>
+<div class="paragraph">
+<p>The four switches on the right can be used to turn on or off various layers of the machine display. These layers will turn on and off automatically as you switch between various operation modes. However, you can use these switches to further control the display.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You can also rotate the 3D view of the model by pressing on any blank background area of the model and dragging.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_zooming_and_panning_in_the_3d_view">Zooming and Panning in the 3D View</h3>
+<div class="paragraph">
+<p>In the 3D view, it is always possible to zoom in or out, or pan the view in all the four directions. To perform these operations, use the semi-transparent buttons along the left edge of the screen. Use the Zoom All button (the second button in this set) to quickly centre the view and display the entire model.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_edit_model_gauges">Edit Model &#8594; Gauges</h3>
+<div class="paragraph">
+<p>In this page, the back-gauges are displayed, and their position can be edited.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editgauge.png" alt="editgauge"></span></p>
+</div>
+<div class="paragraph">
+<p>The gauges can be re-positioned simply by touching them and dragging them into a new position.</p>
+</div>
+<div class="paragraph">
+<p>You can drag the gauges up against an edge or flange of the model. If you try to drag the gauges any further, the gauges will not move as they are already in contact with a flange or edge of the model. This is a very quick and intuitive way of positioning gauges precisely against any edge. If the gauges are firmly in contact with an edge like this, you will continue to see a ghost image of the gauge moving with your finger; though the actual gauges will be stopped at the point there they contacted the edge:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editgauge1.png" alt="editgauge1"></span></p>
+</div>
+<div class="sect3">
+<h4 id="_auto_place">Auto-place</h4>
+<div class="paragraph">
+<p>Touching this button commands to re-compute automatic positions for the gauge. If the gauges are moved into some unacceptable location, and if this needs to be fixed automatically, simply touch this button. If you keep on touching, this will cycle through all possible positions for the gauge.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_surface">Surface</h4>
+<div class="paragraph">
+<p>Clicking on the surface button brings up a small window (see picture below) that allows you to choose between different gauging surfaces. As you change the selection in this window, the gauges are immediately re-positioned and collisions, if any, are reported.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/surface.png" alt="surface"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_axis_targets">Axis Targets</h4>
+<div class="paragraph">
+<p>Tapping the axis targets button brings up a dialog (see picture below) similar to that of axis targets in the More page.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/axistarg.png" alt="axistarg"></span></p>
+</div>
+<div class="paragraph">
+<p>Use the Retraction field in the dialog to type in a different gauge-retraction value.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+While touching the Auto-place button, the pullback is also computed automatically.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can edit the gauge positions dimensionally by typing in values for Z, X and R. If the machine has some restrictions on independent movement of gauges, the edit boxes are suitably modified.
+If there are 4 gauges, the dialog would be wider, having columns for gauges 3 and 4. Once you press done, the gauge position is updated, and collision and engagement checks are done.
+The commands next bend and prev bend are used to navigate through the bends.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_flip_part">Flip part</h4>
+<div class="paragraph">
+<p>Touch this button to insert other side of the part into the machine.</p>
+</div>
+<div class="paragraph">
+<p>Normally the shorter flange will go into the machine if it is possible to use that side to reference the gauges. However, in some situations touching this button will rotate the part around 180 degrees.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_edit_model_tooling">Edit Model &gt; Tooling</h3>
+<div class="paragraph">
+<p>This mode is used to edit the tooling (punches and dies) being used in a model. As you perform any editing operation on the model, collision checks are performed and the bend navigator display on the top is updated.
+If there are any potential collisions or other issues with the tooling setup, they are indicated by red squares and touching them reveals more information.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/tooling.png" alt="tooling"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_direct_manipulation_of_parts_and_tooling">Direct manipulation of parts and tooling</h3>
+<div class="paragraph">
+<p>Touch a tool and drag it along the rail direction to re-position the tool on the rail. As you do this, snap guidelines are drawn to help you precisely align the tool with other already-mounted tools. If you touch the tool near its centre when you start dragging it, then you can align the center of the tool with the center of another tool. See the below example where we are dragging the punch and aligning it precisely with the die:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/dirmanipu.png" alt="dirmanipu"></span></p>
+</div>
+<div class="paragraph">
+<p>Similarly, we can pick up a tool by touching near its left edge or right edge, and that edge can then be used for precise alignment.
+You can also touch the part near the bend line and drag it laterally along the machine axis to re-position the part to another tooling station. While dragging tools, you can pick up a part by the left, center or right edge of a bend line, and corresponding snap line displays are drawn to help positioning the part precisely.</p>
+</div>
+<div class="sect3">
+<h4 id="_add_mount">Add Mount</h4>
+<div class="paragraph">
+<p>The <strong>Add Mount</strong> button is used to add new tooling (a punch, die, punch holder or die holder). Tapping this brings up a panel where you can select a punch, a die, a punch holder or a die holder; then press <mark><kbd>d</kbd></mark> in this panel to add the tool.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/addmount.png" alt="addmount"></span></p>
+</div>
+<div class="paragraph">
+<p>The tool is added with a length computed based on the current workpiece; you can subsequently edit the length or position of the tooling mount.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_edit_mount">Edit Mount</h4>
+<div class="paragraph">
+<p>Tap the Edit Mount to modify the length, position or other details of the currently selected tool mount (the one that is displayed in magenta). To edit a different mount, touch that first to select it, and then touch Edit Mount. The command displays a panel like the one below:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/editmount.png" alt="editmount"></span></p>
+</div>
+<div class="paragraph">
+<p>The <strong>Length</strong> setting can be used to modify the length of the tool mount; will compute the closest possible length to the one requested based on the tool pieces available in inventory.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>Position</strong> setting specifies the position of the tool on the machine. You can specify the left, center or right edge of the tool position by tapping one of the three alignment icons under the Part position input box.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>Part Position</strong> setting positions the currently selected bend line in the workpiece along the machine. For some bends, it is necessary to precisely position the part relative to the tool to avoid flanges from colliding into the punch; this setting allows fine controlling over the part position. Like the tool position, you can specify the part position by the left, center or the right end of the bend line by selecting one of the alignment icons.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>Apply</strong> button is used to apply the changes made to the Length, Position or the Part Position to the model. After you do this, will check for collisions, and if there are any, the Bend Navigator on the top of the screen will glow red, displaying the problems.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>Change Tool</strong> button is used to replace this tool with a different one, while keeping the mounting position and length identical (where possible). Touching this button brings up a tool selection panel like the one shown in the picture that follows.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/toolinventory.png" alt="toolinventory"></span></p>
+</div>
+<div class="paragraph">
+<p>We are now replacing a punch with another punch.</p>
+</div>
+<div class="paragraph">
+<p>Since the original punch is a Goose Neck punch, other goose neck punches that are suitable are displayed first. To switch to a different shape of punch, here you touch the Goose Neck label and pick another shape; then another punch is picked. An image of the selected punch and the details (height, angle) are shown. Once you have selected a suitable replacement tool, touch the <strong>done</strong> button to change the tool mounted in the station (a collision check will immediately be done to verify that the tool you have selected is acceptable).</p>
+</div>
+<div class="paragraph">
+<p>The <strong>Horn Type</strong> button is used to switch between different shoulder (or horn) settings for the currently selected tool. This button appears only if you have a punch selected, and the punch has some shoulder segments in the inventory.</p>
+</div>
+<div class="paragraph">
+<p>The image below shows the Horn Type button being used to cycle through different shoulder settings for a punch:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/horn.png" alt="horn"></span></p>
+</div>
+<div class="paragraph">
+<p>Use the <strong>Flip</strong> button to flip the mounted tool.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_del_mount">Del Mount</h4>
+<div class="paragraph">
+<p>Use this to remove the currently selected tool from the setup.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_deleting_a_punch_holder">Deleting a punch holder</h4>
+<div class="paragraph">
+<p>When you delete a punch holder, checks if the punch underneath can be mounted directly on the punch rail. If this is the case, then the punch moves up and fixes on the rail. Otherwise the punch is also deleted. When you replace a punch holder with a different one, the punch underneath is shifted up or down appropriately to accommodate their difference in heights. If the new punch holder cannot hold this punch (valency different) then the punch is dropped.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_drag_station">Drag station</h4>
+<div class="paragraph">
+<p>A station is a punch and die mount, along with the parts that are processed there.</p>
+</div>
+<div class="paragraph">
+<p>Use this button to re-position an entire station along the machine rail. Touching this button displays a <strong>Station Position</strong> dialog to type-in a value. The value that is displayed (and the one you type in) is the left edge of the punch mount. Once you press the OK mark on the dialog, the die and the part also get dragged along with the mount and remain aligned correctly with respect to each other. This operation is often used to drag an entire station off to one side so a new station can then be created using the <strong>Add Tool</strong> button.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_recompute_2">Recompute</h4>
+<div class="paragraph">
+<p>Touching this button brings up the <strong>Select Tools</strong> dialog as shown in the picture below:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/selectools.png" alt="selectools"></span></p>
+</div>
+<div class="paragraph">
+<p>Using this tool selection dialog, you can select a different punch, turn some locks off to relax some constraints that you created using the <em>Part Settings</em> dialog during the create phase.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_new_setup">New setup</h4>
+<div class="paragraph">
+<p>Clicking this displays the New Setup dialog (see picture below) that allows you to create a new setup for the current bend. This dialog also displays all the available setups, along with the list of bends that are currently using them</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/crsetup.png" alt="crsetup"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_assign_setup">Assign setup</h4>
+<div class="paragraph">
+<p>Clicking this displays the <strong>Assign Setup</strong> dialog (see picture below) that allows you to set the current bend to use a different setup. This dialog displays all the available setups, along with the list of bends that are currently using them. Use this dialog to switch all bends over to a single setup, and then do further adjustments to that setup (like changing some station lengths or re-positioning the part to a different station). After all the editing is done, save the model. At this point, any setups that are not used by any bends are discarded, and the program becomes a "single setup" program.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/assign.png" alt="assign"></span></p>
+</div>
+<div class="paragraph">
+<p>When a new setup is assigned to a bend, it tries to automatically shift the part position along the machine axis until moved under a suitable station. For example, see picture below for a before-and-after view of a setup change. When the setup was changed, the part got shifted to the left so it would correctly engage with the punch and die of the first station on the left.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/setup.png" alt="setup"></span></p>
+</div>
+<div class="paragraph">
+<p>If no suitable stations are found (for example, all of them are too short, or all of them collide) then the part position is unchanged, and you can drag the part into a new position manually.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_edit_model_simulation">Edit Model &#8594; Simulation</h3>
+<div class="paragraph">
+<p>In this page, you can see an animated 3D simulation of the bending process.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/simulat.png" alt="simulat"></span></p>
+</div>
+<div class="paragraph">
+<p>Touching the <strong>cycle</strong> button runs the simulation of the current bend. Normally, the simulation is displayed with the punch, die and back-gauges visible. Use the <strong>Display</strong> button to customize the view, so that the entire machine is displayed.</p>
+</div>
+<div class="paragraph">
+<p>Touch the <strong>cycle all</strong> button to display a simulation of all the bends, one after the other. When this is running, touch the stop button to <strong>stop</strong> the simulation process.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>next stage</strong> button, on each click, positions the simulation in the next stage of bending.</p>
+</div>
+<div class="sect3">
+<h4 id="_done">Done</h4>
+<div class="paragraph">
+<p>After you have finished viewing or editing the model, touch the Done button to return to the home page. At this point, if there are any changes made, a prompt like the one below is displayed:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/confirm1.png" alt="confirm1"></span></p>
+</div>
+<div class="paragraph">
+<p>If you choose <span class="icon"><i class="fa fa-check"></i></span> the changes are saved and a new bending program is generated, ready to run on the machine. If you choose <span class="icon"><i class="fa fa-close"></i></span>, all editing changes you made are discarded and the model reverts to its state before it was opened for editing.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_edit_model_more">Edit Model &gt; More</h4>
+<div class="paragraph">
+<p>Use this page to edit corrections, bend cycle data and axis target.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/multisetup.png" alt="multisetup"></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+  <h3>Contents</h3>
+  <ul>
+    <li level="1">
+      <a href="#_direct_program">Direct Program</a>
+    </li>
+    <li level="1">
+      <a href="#_models">Models</a>
+    </li>
+    <li level="2">
+      <a href="#_edit_model_sequence">Edit Model &#8594; Sequence</a>
+    </li>
+    <li level="2">
+      <a href="#_zooming_and_panning_in_the_3d_view">Zooming and Panning in the 3D View</a>
+    </li>
+    <li level="2">
+      <a href="#_edit_model_gauges">Edit Model &#8594; Gauges</a>
+    </li>
+    <li level="2">
+      <a href="#_edit_model_tooling">Edit Model &gt; Tooling</a>
+    </li>
+    <li level="2">
+      <a href="#_direct_manipulation_of_parts_and_tooling">Direct manipulation of parts and tooling</a>
+    </li>
+    <li level="2">
+      <a href="#_edit_model_simulation">Edit Model &#8594; Simulation</a>
+    </li>
+  </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+  <span class="prev"><a href="../create/index.html">Create</a></span>
+  <span class="next"><a href="../run/index.html">Run</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <ul id="results"></ul>
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2024 by JFY-International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

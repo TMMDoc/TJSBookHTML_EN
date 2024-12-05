@@ -1,0 +1,111 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_unit">Unit</a></li>
+<li><a href="#_language">Language</a></li>
+<li><a href="#_edit_materials">Edit Materials</a></li>
+<li><a href="#_screen_size">Screen Size</a></li>
+<li><a href="#_tool_catalogues">Tool Catalogues</a></li>
+<li><a href="#_machine_settings">Machine Settings</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page groups together the settings that are global.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../img/othersettings.png" alt="othersettings"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_unit">Unit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Switches the current working units (mm and inch).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_language">Language</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use this option to select the language preferred.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_edit_materials">Edit Materials</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="../img/editmaterial.png" alt="editmaterial"></span></p>
+</div>
+<div class="paragraph">
+<p>You can use this dialog to view existing materials in RightAngle, add new materials or remove materials from the library. You can navigate through the material list by pressing the <strong>next</strong> and <strong>previous</strong> commands. Use the <strong>add</strong> command to add a new material to the list. Once you press this button, a page with default materials' data is shown. Change the necessary fields to modify and then press <strong>done</strong>. A warning message is issued if the changes needs to be saved. Press the ok mark to save the changes or press the cancel mark to discard the changes. To remove an existing material from the library, navigate to that material and then press <strong>delete</strong>.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>Ve/Ri</strong> field in a material is used for die selection, among others. It should always be set to a valid input, and never to 0. Currently ignores inputs if you try to set it below 1 or above 10 to prevent accidental setting of this field to 0. n corresponds to strain hardening exponent and E corresponds to Young’s Modulus.</p>
+</div>
+<div class="paragraph">
+<p><strong>Deductions:</strong></p>
+</div>
+<div class="paragraph">
+<p>You can use bend deduction tables to control unfolding length (in addition to the earlier method of using K-factors). The first stage is defining the bend deduction tables for each material. Use this <strong>Deductions</strong> command to bring up the bend deductions table for the currently selected material.</p>
+</div>
+<div class="paragraph">
+<p>The bend deduction table is organized by material, then by thickness, die v-width and punch-radius. You can see the bend deduction table for S.S. in the picture shown below (the dotted horizontal lines separate one thickness from the other).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../img/deductions.png" alt="deductions"></span></p>
+</div>
+<div class="paragraph">
+<p>The list of bend deductions is seen on the left and tapping on one brings it up for editing. The currently selected entry (if any) is highlighted with a small dot near it. On the right, type in a thickness, V-width, punch radius and deduction and tap the button to either Add New Entry or Update Deduction depending on whether you are editing an existing deduction value or entering a new one. When you start with an empty database, enter the values in the corresponding input boxes and then press &lt;Enter Values Above&gt; button to add them to the deductions table.</p>
+</div>
+<div class="paragraph">
+<p>You can also use the Pick buttons near the die V-width and punch-radius to pick a die or punch (from which the values are copied). Note that the deduction table is organized using only these keys: thickness, v-width and punch-radius, and not by the actual punch or die names. So, all dies that have the same V-width will share the same bend deduction entry. Once these entries are defined here, they can then be accessed from the Part Settings page.</p>
+</div>
+<div class="paragraph">
+<p><strong>Delete Entry:</strong></p>
+</div>
+<div class="paragraph">
+<p>Use this button to delete an entry from the bend deduction table.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_screen_size">Screen Size</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use this option to change the screen size of RightAngle.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tool_catalogues">Tool Catalogues</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>RightAngle now ships with several standardized tool catalogues. These can be installed and made available for use.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../img/toolcatalogue.png" alt="toolcatalogue"></span></p>
+</div>
+<div class="paragraph">
+<p>This list shows the tool catalogues that are already installed on the left, and the ones that are still available on the right. You can choose Add to add a complete tool catalogue to your installation, or use Remove to remove one. Removing a tool catalogue is an operation that has some consequences, so a warning shown below pops up:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../img/confirm3.png" alt="confirm3"></span></p>
+</div>
+<div class="paragraph">
+<p>The tool catalogues must be in a standardised format for these to be installable.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_machine_settings">Machine Settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Used to edit various machine parameters. Press the Close button to close the settings dialog.</p>
+</div>
+</div>
+</div>

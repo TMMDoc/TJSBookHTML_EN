@@ -1,0 +1,4 @@
+TITLE=TJS90 Reference Manual
+OUTDIR=../RABookHtml
+LOGO=img/JFY.png,145,15
+COPYRIGHT=Copyright &copy; 2024 by JFY-International. All rights reserved.

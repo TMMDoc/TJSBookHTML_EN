@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Jog Axes</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/JFY.png" width="145" height="15" /></div>
+        <div><p>TJS90 Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+  <ul>
+    <li><button class="tree blank"></button><a href="../index.html">Welcome to TJS90</a></li>
+    <li><button class="tree blank"></button><a href="../home/index.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../create/index.html">Create</a></li>
+    <li><button class="tree blank"></button><a href="../edit/index.html">Edit</a></li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../run/index.html">Run</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../run/safety messages.html">Safety Message</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree open"></button>
+      <a href="index.html">Settings</a>
+      <ul>
+        <li><button class="tree blank"></button><a class="active" href="jogaxes.html">Jog Axes</a></li>
+        <li><button class="tree blank"></button><a href="manualprogram.html">Manual Program</a></li>
+        <li><button class="tree blank"></button><a href="toolinventory.html">Tool Inventory</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="other settings/index.html">Other Settings</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="other settings/machinesettings.html">Machine Settings</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../file selection panel/index.html">File Selection Panel</a></li>
+    <li><button class="tree blank"></button><a href="../part settings/index.html">Part Settings</a></li>
+    <li><button class="tree blank"></button><a href="../link programs/index.html">Link Programs</a></li>
+    <li><button class="tree blank"></button><a href="../table programming/index.html">Table Programming</a></li>
+  </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+  <div>
+    <button>
+      <img src="../res/home.png">
+    </button>
+  </div>
+  <div>
+    <a href="index.html">Settings</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="jogaxes.html">Jog Axes</a>
+  </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Jog Axes</h1>
+<div class="sect1">
+<h2 id="_multi_axis_jog">Multi-Axis Jog</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This panel is used to move one or more axes of the machine either in jog mode, or by using a hand-wheel. The current positions of all the axes can also be viewed using this panel.</p>
+</div>
+<div class="sect2">
+<h3 id="_jogging_the_axes">Jogging the axes</h3>
+<div class="paragraph">
+<p>Each back-gauge is surrounded by 6 arrows which can be used to move it in one of the 6 primary directions. When you touch one of these axes, it lights up yellow while the axis is moving.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/jogaxis.png" alt="jogaxis"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+On some press-brakes, the Jog Axes screen can be used to only select the axes to be jogged, and separate Jog Forward and Jog Backward buttons mounted on the operator panel must be pressed to do the actual axis movement. In that case, the jog axes panel will appear a bit different from the one shown in the picture above.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The <strong>teach</strong> button is displayed (see picture below) when the axis jog panel has been called up while creating a direct program. Touching this button records the current back-gauge positions as the positions for the bending step that you are creating.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/jogaxis1.png" alt="jogaxis1"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Jog Velocity:</strong></p>
+</div>
+<div class="paragraph">
+<p>Use this button to jog the axis before homing. This button will appear when the axes are not homed, denoted by <span class="icon"><i class="fa fa-asterisk"></i></span>* before current position.</p>
+</div>
+<div class="paragraph">
+<p><strong>Increment:</strong></p>
+</div>
+<div class="paragraph">
+<p>Use this button to jog the axis in step of 50 or 100 or 1000 micron.
+Direct Move: Click on the current position of back gauge or ram axis to enter the target position to which the axis should move. Machine will go to stop and on pressing the start, axis will start moving to the entered position. Target position is denoted after arrow symbol. To achieve this, no other mode should be active.</p>
+</div>
+<div class="paragraph">
+<p><strong>Tonnage:</strong></p>
+</div>
+<div class="paragraph">
+<p>Use this button to set the tonnage used during ram manual moves.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/tonnage.png" alt="tonnage"></span></p>
+</div>
+<div class="paragraph">
+<p>The actual real-time position will also be displayed (if a real run-time is connected, capable of providing the position).</p>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+  <h3>Contents</h3>
+  <ul>
+    <li level="1">
+      <a href="#_multi_axis_jog">Multi-Axis Jog</a>
+    </li>
+    <li level="2">
+      <a href="#_jogging_the_axes">Jogging the axes</a>
+    </li>
+  </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+  <span class="prev"><a href="index.html">Settings</a></span>
+  <span class="next"><a href="manualprogram.html">Manual Program</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <ul id="results"></ul>
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2024 by JFY-International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

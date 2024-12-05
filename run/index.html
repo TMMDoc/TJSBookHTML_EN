@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Run</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/JFY.png" width="145" height="15" /></div>
+        <div><p>TJS90 Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+  <ul>
+    <li><button class="tree blank"></button><a href="../index.html">Welcome to TJS90</a></li>
+    <li><button class="tree blank"></button><a href="../home/index.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../create/index.html">Create</a></li>
+    <li><button class="tree blank"></button><a href="../edit/index.html">Edit</a></li>
+    <li>
+      <button class="tree open"></button>
+      <a class="active" href="index.html">Run</a>
+      <ul>
+        <li><button class="tree blank"></button><a href="safety messages.html">Safety Message</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../settings/index.html">Settings</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../settings/jogaxes.html">Jog Axes</a></li>
+        <li><button class="tree blank"></button><a href="../settings/manualprogram.html">Manual Program</a></li>
+        <li><button class="tree blank"></button><a href="../settings/toolinventory.html">Tool Inventory</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../settings/other settings/index.html">Other Settings</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../settings/other settings/machinesettings.html">Machine Settings</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../file selection panel/index.html">File Selection Panel</a></li>
+    <li><button class="tree blank"></button><a href="../part settings/index.html">Part Settings</a></li>
+    <li><button class="tree blank"></button><a href="../link programs/index.html">Link Programs</a></li>
+    <li><button class="tree blank"></button><a href="../table programming/index.html">Table Programming</a></li>
+  </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+  <div>
+    <button>
+      <img src="../res/home.png">
+    </button>
+  </div>
+  <div>
+    <a href="index.html">Run</a>
+  </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Run</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Switching to the Run environment displays programs (like the display in the Edit page). A model-based program or a direct program can be selected and run from this page.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/run.png" alt="run"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_run_model_based_program">Run: Model-based program</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Touch the program you want to run and then press this button. This brings up the Setup sheet of the program selected. Pressing the run button on this page does the actual run process. If the tool(s) used in the program no longer exist in the tool inventory, a warning message is displayed as shown below:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/toolmissing.png" alt="toolmissing"></span></p>
+</div>
+<div class="paragraph">
+<p>The program cannot be run until you navigate to the edit mode and change the tool.</p>
+</div>
+<div class="paragraph">
+<p>If the program contains multiple setups, a message like the one below appears when you try to run the program. Once you select which setup you are running, only the tools related to that setup are displayed in the setup sheet, and only those bends are programmed into the machine for running.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/select.png" alt="select"></span></p>
+</div>
+<div class="paragraph">
+<p>The commands save flat, rename, delete, transfer and organize are similar to the ones in the Edit page. See the page for more details.</p>
+</div>
+<div class="paragraph">
+<p>Use the up and down arrows present to the bottom right of the page to scroll through and view the list of programs the page contains</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_direct_program">Direct Program</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Running a direct program is like running a program that was created from a 3D model. Select the program you want to run and then press run. A small dialog as shown in the picture below comes up displaying a brief information about the program you are about to run.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/multisetup.png" alt="multisetup"></span></p>
+</div>
+<div class="paragraph">
+<p>Pressing the <strong>run</strong> button shown in this dialog takes you to the <strong>Run Program</strong> page. This page is similar to the page which comes up while running a model, the only difference being, in place of the 3D views of each step, a table with the step values are displayed. While running a direct program, the <strong>edit cycle</strong> and <strong>corrections</strong> buttons are highlighted whenever there is a change, and there is also a yellow dot displayed near each bend that has been corrected. See the image below - the current bend has some cycle corrections, and bends 1 and 3 have some corrections:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/multisetup1.png" alt="multisetup1"></span></p>
+</div>
+<div class="paragraph">
+<p>The actual bending cycle is similar - tap the pedal to position the gauges, press the pedal to bend.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setup_sheet">Setup Sheet</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When a program is selected for running, the setup sheet is displayed. This shows the blank and the finished part, along with their dimensions:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/sheetsetup.png" alt="sheetsetup"></span></p>
+</div>
+<div class="paragraph">
+<p>The setup sheet guides you through mounting the tools on the brake. Use the Next tool and Prev tool buttons to switch through all the tools (dies, die holders, punch holders, punches) to be mounted to run this program. Finally, press the Run button to switch to run the program.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_run_program">Run Program</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this environment, the press-brake is being used to perform the bending. Each bend essentially consists of two phases:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Tap the foot pedal to move the back-gauges into position.</p>
+</li>
+<li>
+<p>The sheet is positioned into the brake, and press and hold the foot pedal to perform the bend.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/runprog.png" alt="runprog"></span></p>
+</div>
+<div class="paragraph">
+<p>The indicators on the top left guide you through this cycle. The 3D display on the right displays how the blank should be inserted into the machine for each step. As you go through the operations, this picture changes to display the appropriate bend. Since this is a live 3D view, you can use the display button to change what is displayed, or to change the viewpoint. You can also use the zoom and pan navigation buttons along the bottom of the screen to manipulate the 3D view.</p>
+</div>
+<div class="sect2">
+<h3 id="_part_count">Part Count</h3>
+<div class="paragraph">
+<p>The part quantity is displayed to the left along with the other details displayed about the program being processed. This counts as the parts are being processed. To set the current part count, or to set a maximum quantity, just tap on the part count number. This brings up an input box like the one below:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/partqnt.png" alt="partqnt"></span></p>
+</div>
+<div class="paragraph">
+<p>This allows you to set both the current part count and the maximum(optionally). Leave them blank, if you don&#8217;t have a pre-set maximum you want to stop at. If you do set it, and that quantity is reached, the following alert message is displayed:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/qnt.png" alt="qnt"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_corrections">Corrections</h3>
+<div class="paragraph">
+<p>Touch the <strong>corrections</strong> button to bring up the adjustment screen using which you can tweak bend angles after making a test piece and measuring the actual angles. You can also perform gauge adjustments by pressing the corresponding button in the Corrections dialog. See the section on Corrections for more details.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cycle_editing">Cycle Editing</h3>
+<div class="paragraph">
+<p>Touch the Edit Cycle button to bring up the bend cycle editor.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/bendcycle.png" alt="bendcycle"></span></p>
+</div>
+<div class="paragraph">
+<p>This editor displays a time-graph of the bending process. You can set up ram positions (like the slow-down positions), ram speeds (like the bend speed, approach speed) and delays (like the bend delay and the pinch delay) and then press <strong>apply</strong> to apply the changes. The changes made here are also saved with the program and used for the next time. Sometimes on a part, you may want a value to be copied across all the bends, say for example the TDC value. To facilitate this, use <strong>copy</strong>. Pressing this button copies the selected field&#8217;s value across all the bends of the part. A warning message (like Set Slowdown=6mm on all bends?) is displayed before applying the change.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_numeric_panel">Numeric Panel</h3>
+<div class="paragraph">
+<p>Touch the Numeric button to bring up the Numeric Panel. Current and target position of all the axes is displayed here along with bend cycle positions. Correction column can be editor for all the axes, Force and Crown.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/numpad.png" alt="numpad"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_corrections_2">Corrections</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The sheet metals used in the workshops hardly ever has their nominal thickness. The real thickness commonly varies ±10% from the nominal value. Also, the variation is not constant across the whole length of the sheet. The thickness on the left side can be different from the thickness on the right side (sheets with a trapezoidal section). Also, after having made a bend, if the angle intended is not obtained you need to make some tweaks to ensure that the angle originally intended is achieved. To correct such types of errors from affecting the final product you provide the machine with corrections which are provided in this page. There are four types of corrections defined which as detailed below.</p>
+</div>
+<div class="sect2">
+<h3 id="_angle_correction">Angle Correction</h3>
+<div class="paragraph">
+<p>After having made a bend, the operator measures the angle obtained. The measured angular value is entered in the <strong>Angle</strong> field. Suppose, you want an interior angle of 135°, you make a bend and obtain a wide angle which measures 138°. Now, you just enter 138° in this field. Variants of this method allow you to enter two or three measures. automatically calculates the correction to obtain the angle originally programmed. If after making the corrected bend, the angle is still not correct, simply enter the new measured angle value(s). Corrections obtained with this method sum up. Typically, the situation converges very quickly, say after one or two iterations.</p>
+</div>
+<div class="sect3">
+<h4 id="_center_angle">Center angle:</h4>
+<div class="paragraph">
+<p>When selected, this option provides a Center input box for entering the Measured interior angle. You simply measure the resulting angle and enter the exact value in this field, RightAngle automatically computes a correction in BDC target and applies it to both Y1 and Y2.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/centerangle.png" alt="centerangle"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_end_angles">End angles:</h4>
+<div class="paragraph">
+<p>Selecting this mode, allows    you to enter the Left and Right   angles under the Measured interior angles field. In this case, you measure the resulting angle near each extremity. As a result, ca different correction is computed in BDC target separately for Y1 and Y2, considering the bend position along the bed and its outer width. This is only possible when the bend width is 10% of the bed length. With shorter widths, slight differences in measured left and TJS90s might result in much larger difference in Y1 and Y2 corrections leading to an excessive ram tilt.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_three_angles">Three angles:</h4>
+<div class="paragraph">
+<p>In this mode, you can enter the <strong>Left</strong>, <strong>Center</strong> and <strong>Right</strong> angles under the <strong>Measured interior angles</strong> field. Here, you measure the resulting angle in the middle and near each extremity, thereby computing a different correction in BDC target separately for Y1 and Y2 and a correction in target position for the crowning device. The three corrections are computed in a consistent way, considering the mutual influence of crowning on punch penetration depending on the position of the bend along the bed and its outer width. For instance, a large positive increase in crowning will lead to a surprisingly positive correction to Y1 and Y2. This method is only possible when bend width is at least 10% of bend length. Note that with shorter widths, slight differences in measured left and TJS90s might result in much larger difference in Y1 and Y2 corrections, leading to an excessive ram tilt.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_direct_corrections">Direct corrections:</h4>
+<div class="paragraph">
+<p>When you choose this option, the <strong>Y1 correction</strong>, <strong>Y2 correction</strong> and <strong>Crowning correction</strong> fields are displayed. You simply enter a value in the required field for correction. If the correction concerns the two sides of the beam, the same value for Y1 and Y2 must be entered. You can alter the crowning correction using the same principle.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Direct corrections do not sum up. They simply replace the existing corrections.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_force_adjust">Force adjust:</h4>
+<div class="paragraph">
+<p>The value entered in this field is added to the precomputed bending force (tonnage) needed for the bend. If the resulting total force is greater than the tools limit, a warning is issued.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_depth_collision_authorized">Depth collision authorized:</h4>
+<div class="paragraph">
+<p>In certain bends, it is foreseen that the punch will push the material against the die&#8217;s V bottom or against its inner walls, which is named as <em>Depth Collision.</em> Some tools support this, while others do not. By turning on this field, you force the system to accept the collision. Bases its computation on a theoretical geometry of the tools and the material under pressure that might be slightly different from the reality. Therefore, in the actual case, the collision might be a near miss. Also, the tools might be sufficiently robust for a slight contact but not sufficiently to be qualified as robust enough for all cases. Finally, such a warning also makes it explicit that the bend will not be a so-called air-bend, as probably expected by the operator. Instead, it will be a variant of bottoming bends, which require a slightly different cycle. For these reasons, operator must be warned of a possible problem and has thus the possibility to give her permission, assuming the responsibility of any damage to tools.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gauge_correction">Gauge Correction</h3>
+<div class="paragraph">
+<p>In this page, you can correct the target position of each back-gauge finger, in order to correct the resulting flange length. Do not use this to select an entirely new gauging point. For each BG finger, you can correct the target along three classical directions: X, R and Z.</p>
+</div>
+<div class="paragraph">
+<p><strong>X:</strong> Positive or negative correction along the X direction. To set the BG fingers at a greater distance from the tools, enter a positive value.</p>
+</div>
+<div class="paragraph">
+<p><strong>Z:</strong> Positive or negative correction along the Z direction. To set the BG fingers further on the right, towards the Y2 cylinder, enter a positive value.</p>
+</div>
+<div class="paragraph">
+<p><strong>R:</strong> Positive or negative correction along the R direction. To further lift the BG fingers, enter a positive value.</p>
+</div>
+<div class="paragraph">
+<p><strong>Retraction:</strong> In certain situations, it is necessary to disengage the back gauge during bending. The retraction value is a relative value usually positive, implying that the gauge moves away from the die. If a negative value is programmed, this allows to execute a negative retraction, that is a displacement towards the die.
+Operator can modify the value automatically computed by the system. Note that the value entered in this field represents the actual distance moved, not a correction to be added to previously computed values, as for X, R and Z corrections above.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A retraction value of 0 (default value) means "no retraction and no ram stop at pinch point".
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A retraction value of 0.001 means "no retraction, ram will briefly stop at pinch point".
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When some value is given for retraction it means that "ram stops at pinch point, retraction is performed, ram resumes descent". Depending on how the machine parameters have been set, ram can also resume descent before the retraction is finished. It could even immediately resume descent as soon as the retraction has just started.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Once the corrections are entered, use the <strong>Apply</strong> button to apply the corrections to the bend. In certain cases, you might want these corrections to be applied globally on all the bends (say for example in a part with 10 bends) rather than applying the correction on each bend. To facilitate such cases, use the <strong>copy</strong> option that provides. First apply the corrections that you have done to the current bend. Then press <strong>copy</strong> to copy the corrections to the other bends. A dialog (see picture below) asking whether to copy the corrections to other bends comes up. Press any option to copy and press cancel to cancel the operation.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/copy.png" alt="copy"></span></p>
+</div>
+<div class="paragraph">
+<p>In the case of angle correction, the adjustments are copied only to same-angle bends (you can see the Y1 correction and Y2 corrections fields getting copied over).</p>
+</div>
+<div class="paragraph">
+<p>Another way to apply correction to all bends is by pressing <strong>general</strong>, which will go to general mode. Correction entered, in general mode, will be applied to all the bends.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/allbend.png" alt="allbend"></span></p>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+  <h3>Contents</h3>
+  <ul>
+    <li level="1">
+      <a href="#_run_model_based_program">Run: Model-based program</a>
+    </li>
+    <li level="1">
+      <a href="#_direct_program">Direct Program</a>
+    </li>
+    <li level="1">
+      <a href="#_setup_sheet">Setup Sheet</a>
+    </li>
+    <li level="1">
+      <a href="#_run_program">Run Program</a>
+    </li>
+    <li level="2">
+      <a href="#_part_count">Part Count</a>
+    </li>
+    <li level="2">
+      <a href="#_corrections">Corrections</a>
+    </li>
+    <li level="2">
+      <a href="#_cycle_editing">Cycle Editing</a>
+    </li>
+    <li level="2">
+      <a href="#_numeric_panel">Numeric Panel</a>
+    </li>
+    <li level="1">
+      <a href="#_corrections_2">Corrections</a>
+    </li>
+    <li level="2">
+      <a href="#_angle_correction">Angle Correction</a>
+    </li>
+    <li level="2">
+      <a href="#_gauge_correction">Gauge Correction</a>
+    </li>
+  </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+  <span class="prev"><a href="../edit/index.html">Edit</a></span>
+  <span class="next"><a href="safety messages.html">Safety Message</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <ul id="results"></ul>
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2024 by JFY-International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

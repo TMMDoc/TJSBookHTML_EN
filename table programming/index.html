@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Table Programming</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/JFY.png" width="145" height="15" /></div>
+        <div><p>TJS90 Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+  <ul>
+    <li><button class="tree blank"></button><a href="../index.html">Welcome to TJS90</a></li>
+    <li><button class="tree blank"></button><a href="../home/index.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../create/index.html">Create</a></li>
+    <li><button class="tree blank"></button><a href="../edit/index.html">Edit</a></li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../run/index.html">Run</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../run/safety messages.html">Safety Message</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../settings/index.html">Settings</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../settings/jogaxes.html">Jog Axes</a></li>
+        <li><button class="tree blank"></button><a href="../settings/manualprogram.html">Manual Program</a></li>
+        <li><button class="tree blank"></button><a href="../settings/toolinventory.html">Tool Inventory</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../settings/other settings/index.html">Other Settings</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../settings/other settings/machinesettings.html">Machine Settings</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../file selection panel/index.html">File Selection Panel</a></li>
+    <li><button class="tree blank"></button><a href="../part settings/index.html">Part Settings</a></li>
+    <li><button class="tree blank"></button><a href="../link programs/index.html">Link Programs</a></li>
+    <li><button class="tree blank"></button><a class="active" href="index.html">Table Programming</a></li>
+  </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+  <div>
+    <button>
+      <img src="../res/home.png">
+    </button>
+  </div>
+  <div>
+    <a href="index.html">Table Programming</a>
+  </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Table Programming</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is used to ease editing multiple bends of the part.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/tablepro.png" alt="tablepro"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_add_remove">Add / Remove</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Touch the Add button on the right panel to add bends into the program and touch the Remove button to remove them.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jog">Jog</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Touch the Jog button to bring up the Axis Jog Panel. This allows the user to freely move all the gauge axes using either the handwheel, or by holding down the jog buttons. From this panel, one can record the position of the gauges directly into the program by tapping the teach button there.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_edit_all">Edit All</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Touch the Edit All to edit the selected field’s value across all the bends of the part. Tap it again to disable all bend editing.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_copy">Copy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Touch the Copy to copy the selected field&#8217;s value across all the bends of the part. A warning message (like Set R = 100 for all bends?) is displayed before applying the change.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_run">Run</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Touch the Run to run the currently editing part. If the tooling of the part doesn’t differ from the last run setup, setup sheet will be skipped.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_settings">Settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Touch the Settings button on the top left to bring up the Part Settings dialog where you can configure the settings like material, thickness, punch, die etc.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+  <h3>Contents</h3>
+  <ul>
+    <li level="1">
+      <a href="#_add_remove">Add / Remove</a>
+    </li>
+    <li level="1">
+      <a href="#_jog">Jog</a>
+    </li>
+    <li level="1">
+      <a href="#_edit_all">Edit All</a>
+    </li>
+    <li level="1">
+      <a href="#_copy">Copy</a>
+    </li>
+    <li level="1">
+      <a href="#_run">Run</a>
+    </li>
+    <li level="1">
+      <a href="#_settings">Settings</a>
+    </li>
+  </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+  <span class="prev"><a href="../link programs/index.html">Link Programs</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <ul id="results"></ul>
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2024 by JFY-International. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

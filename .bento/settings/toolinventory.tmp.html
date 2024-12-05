@@ -1,0 +1,139 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_selecting_a_different_tool">Selecting a different tool</a></li>
+<li><a href="#_searching_a_tool">Searching a tool</a></li>
+<li><a href="#_creating_a_custom_tool">Creating a custom tool</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This option is used to view and adjust the tool inventory. A complete tool catalogue for the type of tooling used on your press-brake is installed with RightAngle. You can select certain tools from this catalogue and tag them as being in your inventory by adjusting the quantities of the various pieces.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/toolinventory.png" alt="toolinventory"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Full catalog:</strong></p>
+</div>
+<div class="paragraph">
+<p>Press this button to view the entire tooling catalogue that the system contains. You can then navigate to the tool of your choice. You can view the profile of the selected tool on the top right, along with its details. A few details like Height, Angle, Radius, Tonnage, VWidth, Valency etc. are displayed. In the bottom pane you can find additional tool details displaying the number of pieces the tool comprises as well as the total length of the tool. In case, if a tool has a valency that does not match the machine, there is a warning text displayed in yellow: Tool cannot be mounted directly on machine. This means the valency of the tool does not match that of the machine.</p>
+</div>
+<div class="paragraph">
+<p><strong>Search:</strong></p>
+</div>
+<div class="paragraph">
+<p>Touch this button to search for a particular tool. See Searching a tool for details.</p>
+</div>
+<div class="paragraph">
+<p><strong>New:</strong></p>
+</div>
+<div class="paragraph">
+<p>Touch this button to create a new tool. See Creating a custom tool for details.</p>
+</div>
+<div class="paragraph">
+<p><strong>Add Set:</strong></p>
+</div>
+<div class="paragraph">
+<p>Touch this button to add a complete set of standard pieces to the inventory of the selected tool. You can also touch an individual piece to add up that piece alone to the inventory.</p>
+</div>
+<div class="paragraph">
+<p><strong>Remove Set:</strong></p>
+</div>
+<div class="paragraph">
+<p>Use this option to remove a set of standard pieces from the tool inventory.</p>
+</div>
+<div class="paragraph">
+<p><strong>Add Length:</strong></p>
+</div>
+<div class="paragraph">
+<p>Press this button to add the length of the tool. Press the same and hold to remove.</p>
+</div>
+<div class="paragraph">
+<p><strong>Transfer:</strong></p>
+</div>
+<div class="paragraph">
+<p>Use this option to import or export tools. Once you press this button, you can find the <strong>Import</strong> and <strong>Export</strong> options being displayed. To export a tool, navigate to the corresponding tool and then press <strong>export</strong>. This opens the file selection panel. Select the directory in which you want to tool to be exported and then press the OK mark. This exports the selected tool with a .dxf extension. Similarly, you can import a .dxf/.arv file by selecting the tool traversing through the directories displayed in the file selection panel. This import and export options facilitate the exchange of defined tools across machines. Press the cancel mark to exit the transfer mode. You can create a clone of an existing tool by clicking <strong>Clone</strong>. By giving different tool height, we can change the height of tool while cloning. RightAngle will try to adjust tool geometry for the new height. If it fails, it modifies the reference point and give warning message. The tool is immediately opened for editing so you can adjust some parameters. To delete a tool permanently click on the <strong>Delete</strong> button. Note that this can be done only with tools that you imported. Tools that exist in standard tool catalogs cannot be deleted. Custom tools can be saved through <strong>save</strong> and <strong>load</strong> so that program can be used across RightAngle installed at different location.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_selecting_a_different_tool">Selecting a different tool</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Selecting a different punch or die is a multiple-stage process. First touch the Punch indicator on the top to display a list of different types of tools. Then, touch the tool shape, and finally the actual tool name. Here are the 3 stages displayed in succession:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/selectool.png" alt="selectool"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_searching_a_tool">Searching a tool</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="img/toolsearch.png" alt="toolsearch"></span></p>
+</div>
+<div class="paragraph">
+<p>The above search matches tools with Radius=1, Angle&lt;30 and having OW in the name.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/toolsearch1.png" alt="toolsearch1"></span></p>
+</div>
+<div class="paragraph">
+<p>The above search matches all tools with OW200 OR OW203 in the name, and Radius=4.</p>
+</div>
+<div class="paragraph">
+<p>The search string contains a list of comma-separated words. If a word is of the type:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A&lt;30</p>
+</li>
+<li>
+<p>R=1</p>
+</li>
+<li>
+<p>H&gt;140</p>
+</li>
+<li>
+<p>V=12</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Then it is a conditional. The values that can be compared are A (angle), R (radius), H (height) and V (v-width). the conditional operators are &lt; = and &gt;. If there are multiple conditionals, all of them must match.
+If a search word does not have any of these operators, it is a simple name-match and tools that contain the sequence in their name will match. If there are multiple names provided, any one of them needs to match the tool.
+The search string can be as complex as needed. For example,
+<strong>A&lt;30, H&gt;140, H&lt;220, R=1, OW, EV</strong></p>
+</div>
+<div class="paragraph">
+<p>This will match all tools with OW or EV in the name, and matching these additional conditions: <strong>Angle&lt;30, Height&gt;140, Height&lt;220, Radius=1</strong>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The &lt; and &gt; are really interpreted as &#8656; or &gt;=. In other words, H&lt;140 will match tools with height less than or equal to 140.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_a_custom_tool">Creating a custom tool</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="img/customtool.png" alt="customtool"></span></p>
+</div>
+<div class="paragraph">
+<p>By entering the parameters explained in the diagram, custom tools can be created. We can create punch, die, punch holder, and die holder using above method.</p>
+</div>
+</div>
+</div>
